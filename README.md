@@ -9,6 +9,12 @@ transfer — with an ASCII waterfall, the same idea as the classic Go
 needs no `libcurl` bindings, Go, or Python: DNS, TCP, and TLS timing
 are all measured directly against `std::net` and `rustls`.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
