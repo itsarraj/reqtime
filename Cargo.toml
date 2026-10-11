@@ -1,0 +1,30 @@
+[package]
+name = "reqtime"
+version = "0.1.0"
+edition = "2021"
+description = "httpstat for Rust: a real DNS/TCP/TLS/TTFB timing breakdown for one HTTP(S) request, with an ASCII waterfall — no Go, no Python, no libcurl bindings"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/reqtime"
+readme = "README.md"
+keywords = ["http", "httpstat", "timing", "cli", "networking"]
+categories = ["command-line-utilities", "network-programming"]
+
+[lib]
+name = "reqtime"
+path = "src/lib.rs"
+
+[[bin]]
+name = "reqtime"
+path = "src/main.rs"
+
+[dependencies]
+rustls = "0.23"
+webpki-roots = "0.26"
+url = "2"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+
+[dev-dependencies]
+rcgen = "0.13"
+rustls-pemfile = "2"
